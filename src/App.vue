@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BoardHeader></BoardHeader>
+    <BoardInput></BoardInput>
+    <BoardList></BoardList>
+    <BoardFooter></BoardFooter>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BoardHeader from './components/BoardHeader.vue'
+import BoardInput from './components/BoardInput.vue'
+import BoardList from './components/BoardList.vue'
+import BoardFooter from './components/BoardFooter.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components: { 
+    'BoardHeader': BoardHeader,
+    'BoardInput': BoardInput,
+    'BoardList': BoardList,
+    'BoardFooter': BoardFooter
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  body{
+  text-align : center;
+  background-color: #F6F6F8;
 }
+
+input{
+  border-style: groove;
+  width: 200px;
+}
+
+button{
+  border-style: groove;
+}
+
+.shadow{
+  box-shadow: 5px 10px 10px rgba(0,0,0,0.03)
+}
+
 </style>
