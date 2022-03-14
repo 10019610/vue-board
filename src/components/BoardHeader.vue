@@ -3,7 +3,7 @@
     <h1><a href="#" class="logo"><img alt="boardlogo" src="../assets/boardlogo.png" width="90"></a></h1>
     <div class="menuWrap">
               <ul class="menu">
-                <li><a href="javascript:;">게시판</a></li>
+                <li><a href="javascript:;">개새끼</a></li>
 				
               </ul>
 
