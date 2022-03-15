@@ -1,45 +1,34 @@
 <template>
   <div id="app">
     <BoardHeader></BoardHeader>
-    <BoardInput></BoardInput>
-    <BoardList></BoardList>
+    <HelloWorld></HelloWorld>
     <BoardFooter></BoardFooter>
   </div>
 </template>
 
 <script>
 import BoardHeader from './components/BoardHeader.vue'
-import BoardInput from './components/BoardInput.vue'
-import BoardList from './components/BoardList.vue'
+import HelloWorld from './components/HelloWorld.vue'
 import BoardFooter from './components/BoardFooter.vue'
 
 export default {
+  name: 'App',
   components: { 
     'BoardHeader': BoardHeader,
-    'BoardInput': BoardInput,
-    'BoardList': BoardList,
+    'HelloWorld':  HelloWorld,
     'BoardFooter': BoardFooter
   }
 }
 </script>
 
 <style>
-  body{
-  text-align : center;
-  background-color: #F6F6F8;
+  html,body{padding:0; margin:0;}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin:0; padding:0;
 }
-
-input{
-  border-style: groove;
-  width: 200px;
-}
-
-button{
-  border-style: groove;
-}
-
-.shadow{
-  box-shadow: 5px 10px 10px rgba(0,0,0,0.03)
-}
-
 </style>
