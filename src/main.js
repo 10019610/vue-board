@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './routes'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true;
 
 new Vue({
-  render: h => h(App),
+  render: h => h(App)
+  
+  ,router  //라우터 뷰에 설정
 }).$mount('#app')

@@ -1,16 +1,15 @@
 <template>
   <header> 
-    <h1><a href="#" class="logo"><img alt="boardlogo" src="../assets/boardlogo.png" width="90"></a></h1>
+    <h1><router-link to="/main"><img alt="boardlogo" src="../assets/boardlogo.png" width="90"></router-link></h1>
     <div class="menuWrap">
               <ul class="menu">
-                <li><a href="javascript:;">게시판</a></li>
+                <li><router-link to="/board/list">Main Board</router-link></li>
 				
               </ul>
 
     </div>
   
-  
-  </header>
+    </header>
 </template>
 
 <script>
