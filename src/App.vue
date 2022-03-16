@@ -5,7 +5,7 @@
     <HelloWorld></HelloWorld>
     <BoardList></BoardList>
     <BoardFooter></BoardFooter>
-    <!-- <router-link to="/board">Board</router-link> -->
+    
   </div>
    
 </template>
@@ -22,7 +22,7 @@ export default {
   components: { 
     
     'BoardHeader': BoardHeader,
-    'HelloWorld': HelloWorld,
+    'HelloWorld': HelloWorld,   //임시 메인 화면 컴포
     'BoardList': BoardList,
     'BoardFooter': BoardFooter,
     
