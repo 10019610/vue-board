@@ -1,22 +1,29 @@
 <template>
   <div id="app">
+   
     <BoardHeader></BoardHeader>
-    <!-- <BoardList></BoardList> -->
+    <HelloWorld></HelloWorld>
+    <BoardList></BoardList>
     <BoardFooter></BoardFooter>
-    
+    <!-- <router-link to="/board">Board</router-link> -->
   </div>
+   
 </template>
 
 <script>
 import BoardHeader from './components/BoardHeader.vue'
-// import BoardList  from './components/BoardList.vue'
+import HelloWorld from './components/HelloWorld.vue'
+import BoardList  from './components/BoardList.vue'
 import BoardFooter from './components/BoardFooter.vue'
+
 
 export default {
   name: 'App',
   components: { 
+    
     'BoardHeader': BoardHeader,
-    // 'BoardList': BoardList,
+    'HelloWorld': HelloWorld,
+    'BoardList': BoardList,
     'BoardFooter': BoardFooter,
     
   }

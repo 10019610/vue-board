@@ -5,18 +5,17 @@ import BoardList from '@/components/BoardList'; //리스트 컴포넌트
 
 Vue.use(Router); //vue 라우터 사용
 
-export default new Router({ //라우터 연결
-	routes:[
+export default 
+new Router({      //라우터 연결
+	mode: 'history'
+	,routes: [
 		{
-			path:'/main/list'
-			,name:HelloWorld
-			,component:HelloWorld
+			path:'/main' ,name:'HelloWorld', component: HelloWorld
 		}
 		,{
-			path:'/board/list'
-			,name:BoardList
-			,component:BoardList
-		}
-		
+			path:'/board' ,name:'BoardList' ,component: BoardList
+			
+			
+		},
 	]
 })

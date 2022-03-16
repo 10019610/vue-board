@@ -6,6 +6,5 @@ Vue.config.productionTip = true;
 
 new Vue({
   render: h => h(App)
-  
   ,router  //라우터 뷰에 설정
 }).$mount('#app')

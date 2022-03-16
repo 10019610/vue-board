@@ -3,8 +3,8 @@
     <h1><router-link to="/main"><img alt="boardlogo" src="../assets/boardlogo.png" width="90"></router-link></h1>
     <div class="menuWrap">
               <ul class="menu">
-                <li><router-link to="/board/list">Main Board</router-link></li>
-				
+                <li><router-link to="/board">Board</router-link></li>
+                <li><a href="javascript:;">Test btn</a></li>
               </ul>
 
     </div>
