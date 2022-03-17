@@ -2,9 +2,11 @@
   <div id="app">
    
     <BoardHeader></BoardHeader>
-    <HelloWorld></HelloWorld>
-    <BoardList></BoardList>
+    <!-- <HelloWorld></HelloWorld>
+    <BoardList></BoardList> -->
+    <router-view></router-view>
     <BoardFooter></BoardFooter>
+    
     
   </div>
    
@@ -12,8 +14,8 @@
 
 <script>
 import BoardHeader from './components/BoardHeader.vue'
-import HelloWorld from './components/HelloWorld.vue'
-import BoardList  from './components/BoardList.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+// import BoardList  from './components/BoardList.vue'
 import BoardFooter from './components/BoardFooter.vue'
 
 
@@ -22,8 +24,8 @@ export default {
   components: { 
     
     'BoardHeader': BoardHeader,
-    'HelloWorld': HelloWorld,   //임시 메인 화면 컴포
-    'BoardList': BoardList,
+    // 'HelloWorld': HelloWorld,   //임시 메인 화면 컴포
+    // 'BoardList': BoardList,
     'BoardFooter': BoardFooter,
     
   }

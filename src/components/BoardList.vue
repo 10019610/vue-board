@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2>게시판 리스트</h2>
+    <h2>메인보드 게시판!</h2>
     <div>
-      <div><input type="text" v-model="title" /></div>
-      <a style="cursor: pointer" @click="example">조회</a>
+      <!-- <div><input type="text" v-model="title" /></div>
+      <a style="cursor: pointer" @click="example">조회</a> -->
     </div>
   </div>
 </template>

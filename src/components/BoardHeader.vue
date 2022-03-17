@@ -6,11 +6,11 @@
       /></router-link>
     </h1>
     <h2>
-      <a @click="toMain">메인으루</a>
+      <!-- <a @click="toMain">메인으루</a> -->
     </h2>
     <div class="menuWrap">
       <ul class="menu">
-        <li><router-link to="/board">Main Board</router-link></li>
+        <a><router-link to="/board">Main Board</router-link></a>
       </ul>
     </div>
   </header>
@@ -18,11 +18,14 @@
 
 <script>
 export default {
-  methods: {
-    toMain: function () {
-      this.$router.push("/main/list");
-    },
-  },
+  // methods: {
+  //   toMain: function () {
+  //     this.$router.push("/main/list");
+  //   },
+  // },
+  // toMain: function() {
+  //   this.$router.push("/main")
+  // },
 };
 </script>
 
