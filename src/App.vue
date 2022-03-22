@@ -2,8 +2,8 @@
   <div id="app">
    
     <BoardHeader></BoardHeader>
-    <!-- <HelloWorld></HelloWorld>
-    <BoardList></BoardList> -->
+    <!-- <HelloWorld></HelloWorld> -->
+    <!-- <BoardList></BoardList> -->
     <router-view></router-view>
     <BoardFooter></BoardFooter>
     

@@ -18,7 +18,7 @@ new Router({      //라우터 연결
 			
 		},
 		{
-			path:'/write' , name:'BoardWritwe' , component: BoardWrite
+			path:'/write' , name:'BoardWrite' , component: BoardWrite
 		}
 	]
 })
