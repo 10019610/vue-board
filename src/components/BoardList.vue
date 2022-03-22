@@ -53,7 +53,7 @@ export default {
         .get("http://localhost:8090/board/write")
         .then((result) => {
           console.log(result);
-          this.BoardData;
+          
         })
         .catch((err) => {
           console.log(err);
