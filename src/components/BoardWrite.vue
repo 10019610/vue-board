@@ -8,7 +8,7 @@
         id="createbutton"
         type="button"
         value="게시글 작성"
-        @click="create"
+        @click="create" 
       />
     </span>
   </div>
@@ -42,6 +42,7 @@ export default {
         })
         .catch((err) => {
           console.log(err);
+          
         });
     },
   },
