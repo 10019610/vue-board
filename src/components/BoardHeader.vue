@@ -10,7 +10,7 @@
     </h2>
     <div class="menuWrap">
       <ul class="menu">
-        <a><router-link to="/board">Main Board</router-link></a>
+        <a><router-link to="/board">작성 & 조회</router-link></a>
       </ul>
     </div>
   </header>
@@ -18,7 +18,8 @@
 
 <script>
 export default {
-  // methods: {
+
+  
   //   toMain: function () {
   //     this.$router.push("/main/list");
   //   },

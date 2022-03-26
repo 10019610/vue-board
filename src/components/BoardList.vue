@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>메인보드 게시판!</h1>
+    <h1>글 작성과 조회 !!</h1>
     <!-- <div class="boardSearch">
       <input type="text" value="검색해보세요" /><input
         type="button"
@@ -8,14 +8,15 @@
         @click="search"/>
         
     </div> -->
+    <!-- <div><button @click="BoardList">조회</button></div> -->
+    <div id="listlist">
+      <li v-for="(listyo, index) in vuelist" :key="index">
+        {{ index }}. 제목 : {{ listyo.title }} 내용 : {{ listyo.content }}
+      </li>
+    </div>
 
-    <li v-for="(listyo, index) in vuelist" :key="index">
-      글 : {{ listyo.title }} 내용 : {{ listyo.content }}
-    </li>
-    <div><button @click="BoardList">조회</button></div>
     <div>
       <button @click="write">글 작성</button>
-      <!-- 일단 콘솔로 데이터가 잘 올라오는건 확인  -->
     </div>
   </div>
 </template>
@@ -36,9 +37,14 @@ export default {
   // created 단계에 조회 함수를 실행
   // 일반적으로 조회함수 이름을 search라 하는편, 순수한 검색은 다른이름으로 다시만들것
   created() {
-    this.BoardList;
+    // this.search(this.vuelist);
+    this.BoardList();
+    // console.log(this.search);
   },
   methods: {
+    // search: function () {
+    //   this.$emit("BoardList");
+    // },
     write: function () {
       this.$router.push("/write");
     },
@@ -55,7 +61,6 @@ export default {
           console.log(err);
         });
     },
-    search: function () {},
   },
 };
 </script>
