@@ -21,6 +21,7 @@
 
 <script>
 import axios from "axios";
+// import routes from 'router'
 export default {
   data: () => ({
     title: "",
@@ -44,6 +45,7 @@ export default {
           console.log(err);
           
         });
+        this.$router.push('/board')
     },
   },
 };

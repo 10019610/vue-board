@@ -1,7 +1,10 @@
 <template>
+  
   <div id="app">
-   
+    
     <BoardHeader></BoardHeader>
+    <!-- <div>안녕하세요? 메인으로 가시려면 왼쪽버튼</div> 
+      <div>작성 및 조회를 하시려면 오른쪽 버튼을 눌러주세요.</div> -->
     <!-- <HelloWorld></HelloWorld> -->
     <!-- <BoardList></BoardList> -->
     <router-view></router-view>

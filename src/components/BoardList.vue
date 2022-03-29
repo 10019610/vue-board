@@ -1,23 +1,47 @@
 <template>
   <div>
-    <h1>글 작성과 조회 !!</h1>
-    <!-- <div class="boardSearch">
-      <input type="text" value="검색해보세요" /><input
-        type="button"
-        value="검색"
-        @click="search"/>
-        
-    </div> -->
-    <!-- <div><button @click="BoardList">조회</button></div> -->
-    <div id="listlist">
-      <li v-for="(listyo, index) in vuelist" :key="index">
-        {{ index }}. 제목 : {{ listyo.title }} 내용 : {{ listyo.content }}
-      </li>
+    <h1>BoardList !!</h1>
+    <input type="text" value="검색해보세요" /><input
+      type="button"
+      value="검색"
+      @click="BoardSearch"
+    />
+    <button @click="write">글 작성</button>
+
+    <div class="board">
+      <div v-if="vuelist">
+        <table class="boardtable">
+          <colgroup>
+            <col width="400px" />
+            <col width="400px" />
+            <col width="400px" />
+            <!-- <col width="25%" /> -->
+          </colgroup>
+          <tr>
+            <td>글 번호</td>
+            <td>제목</td>
+            <td>내용</td>
+          </tr>
+          <div class="listlist">
+            <tr v-for="(listyo, index) in vuelist" :key="index">
+              <td>{{ index }}</td>
+              <td>
+                <router-link v-bind:to="'/detail'">{{
+                  listyo.title
+                }}</router-link>
+              </td>
+              <td>
+                <router-link v-bind:to="'/detail'">{{
+                  listyo.content
+                }}</router-link>
+              </td>
+            </tr>
+          </div>
+        </table>
+      </div>
     </div>
 
-    <div>
-      <button @click="write">글 작성</button>
-    </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -28,6 +52,7 @@ export default {
   data: () => ({
     //기능, 주소 , 내용
     vuelist: [],
+
     // titlecontent: {
     //   title: '',
     //   content:'',
@@ -42,9 +67,6 @@ export default {
     // console.log(this.search);
   },
   methods: {
-    // search: function () {
-    //   this.$emit("BoardList");
-    // },
     write: function () {
       this.$router.push("/write");
     },
@@ -61,6 +83,7 @@ export default {
           console.log(err);
         });
     },
+    BoardSearch: function () {},
   },
 };
 </script>
