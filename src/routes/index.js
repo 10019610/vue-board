@@ -4,6 +4,7 @@ import BoardMain from '@/components/BoardMain'; //메인 컴포넌트
 import BoardList from '@/components/BoardList'; //리스트 컴포넌트 
 import BoardWrite from '@/components/BoardWrite';
 import BoardDetail from '@/components/BoardDetail';
+import BoardUpdate from '@/components/BoardUpdate';
 Vue.use(Router); //vue 라우터 사용
 
 export default
@@ -26,8 +27,12 @@ export default
 				path: '/write', name: 'BoardWrite', component: BoardWrite
 			},
 			{
-				path:'/detail' , name:'BoardDetail', component: BoardDetail
+				path:'/detail/:boardId' , name:'BoardDetail', component: BoardDetail, props: true
 			},
+			{
+				path:'/update/:boardId' , name:'BoardUpdate', component: BoardUpdate
+			},
+
 			// 리스트에서 상세로 이동할 때 path 설정법
 			// 주소(url)에 '/:' 추가하고, 다음 전달할 값의 이름을 적어준다.
 			// 주소: /detail 전달할 값: boardId

@@ -12,42 +12,38 @@
       <div v-if="vuelist">
         <table class="boardtable">
           <colgroup>
-            <col width="400px" />
+            <col width="550px" />
             <col width="400px" />
             <col width="400px" />
             <!-- <col width="25%" /> -->
           </colgroup>
-          <tr>
-            <td>글 번호</td>
-            <td>제목</td>
-            <td>내용</td>
+
+          <th>글 번호</th>
+          <th>제목</th>
+          <th>내용</th>
+
+          <tr v-for="(listyo, index) in vuelist" :key="index">
+            <td>{{ index + 1 }}</td>
+            <td @click="goDetail(listyo.boardId)">{{ listyo.title }}</td>
+            <td>
+              {{ listyo.content }}
+            </td>
           </tr>
-          <div class="listlist">
-            <tr v-for="(listyo, index) in vuelist" :key="index">
-              <td>{{ index }}</td>
-              <td>
-                <router-link v-bind:to="'/detail'">{{
-                  listyo.title
-                }}</router-link>
-              </td>
-              <td>
-                <router-link v-bind:to="'/detail'">{{
-                  listyo.content
-                }}</router-link>
-              </td>
-            </tr>
-          </div>
         </table>
       </div>
     </div>
-
-    <router-view></router-view>
+    <!-- <tr
+      v-for="(listyo, index) in vuelist"
+      :key="index"
+      @click="detail(index)"
+    ></tr> -->
   </div>
 </template>
 
 <script>
-// import func from 'vue-editor-bridge';
 import axios from "axios";
+// import func from 'vue-editor-bridge';
+
 export default {
   data: () => ({
     //기능, 주소 , 내용
@@ -83,8 +79,25 @@ export default {
           console.log(err);
         });
     },
+    goDetail: function (boardId) {
+      console.log(boardId);
+      this.$router.push({ name: "BoardDetail", params: { boardId: boardId } });
+    },
+
     BoardSearch: function () {},
+    // BoardBind: function() {
+    //   this.$router.push({})
+    // }
   },
+
+  // detail: function () {
+  //   this.$router.push({
+  //     name: "detail",
+  //     params: {
+  //       boardId: "",
+  //     },
+  //   });
+  // },
 };
 </script>
 
